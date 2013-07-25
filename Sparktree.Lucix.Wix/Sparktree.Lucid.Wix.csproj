@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83E59DEC-C68F-4389-B7AD-DB4945748FEC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sparktree.Lucid.Wix</RootNamespace>
+    <AssemblyName>Sparktree.Lucid.Wix</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="wix">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\wix.dll</HintPath>
+    </Reference>
+    <Reference Include="WixBalExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\WixBalExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="WixIIsExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\WixIIsExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="WixLuxExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\WixLuxExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="WixMsmqExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\WixMsmqExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="WixNetFxExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\WixNetFxExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="WixPSExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\WixPSExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="WixSqlExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\WixSqlExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="WixTasks">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\WixTasks.dll</HintPath>
+    </Reference>
+    <Reference Include="WixUIExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\WixUIExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="WixUnit">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\WixUnit.exe</HintPath>
+    </Reference>
+    <Reference Include="WixUtilExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\WixUtilExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="WixVSExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.7\bin\WixVSExtension.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Extensions\Bal\MappingFluent\ConditionFluent.cs" />
+    <Compile Include="Extensions\Bal\MappingFluent\WixStandardBootstrapperApplicationFluent.cs" />
+    <Compile Include="Extensions\Bal\MappingModel\BalBaseClasses.cs" />
+    <Compile Include="Extensions\IIS\MappingFluent\RecycleTimeFluent.cs" />
+    <Compile Include="Extensions\IIS\MappingFluent\WebAddressFluent.cs" />
+    <Compile Include="Extensions\IIS\MappingFluent\WebApplicationFluent.cs" />
+    <Compile Include="Extensions\IIS\MappingFluent\WebAppPoolFluent.cs" />
+    <Compile Include="Extensions\IIS\MappingFluent\WebSiteFluent.cs" />
+    <Compile Include="Extensions\IIS\MappingFluent\WebVirtualDirFluent.cs" />
+    <Compile Include="Extensions\IIS\MappingModel\IISBaseClasses.cs" />
+    <Compile Include="Extensions\Util\MappingFluent\RegistySearchFluent.cs" />
+    <Compile Include="Extensions\Util\MappingModel\UtilBaseClasses.cs" />
+    <Compile Include="MappingFluent\BaseSchemaFluent.cs" />
+    <Compile Include="MappingFluent\BinaryFluent.cs" />
+    <Compile Include="MappingFluent\BinaryRefFluent.cs" />
+    <Compile Include="MappingFluent\BootstrapperApplicationFluent.cs" />
+    <Compile Include="MappingFluent\BootstrapperApplicationRefFluent.cs" />
+    <Compile Include="MappingFluent\BundleFluent.cs" />
+    <Compile Include="MappingFluent\CatalogFluent.cs" />
+    <Compile Include="MappingFluent\CategoryFluent.cs" />
+    <Compile Include="MappingFluent\ChainFluent.cs" />
+    <Compile Include="MappingFluent\ComboBoxFluent.cs" />
+    <Compile Include="MappingFluent\ComponentFluent.cs" />
+    <Compile Include="MappingFluent\ComponentGroupFluent.cs" />
+    <Compile Include="MappingFluent\ComponentGroupRefFluent.cs" />
+    <Compile Include="MappingFluent\ComponentRefFluent.cs" />
+    <Compile Include="MappingFluent\Abstract\IBaseSchemaFluent.cs" />
+    <Compile Include="MappingFluent\ConditionFluent.cs" />
+    <Compile Include="MappingFluent\ConfigurationFluent.cs" />
+    <Compile Include="MappingFluent\ControlFluent.cs" />
+    <Compile Include="MappingFluent\CreateFolderFluent.cs" />
+    <Compile Include="MappingFluent\CustomActionFluent.cs" />
+    <Compile Include="MappingFluent\CustomActionRefFluent.cs" />
+    <Compile Include="MappingFluent\CustomFluent.cs" />
+    <Compile Include="MappingFluent\DialogFluent.cs" />
+    <Compile Include="MappingFluent\DialogRefFluent.cs" />
+    <Compile Include="MappingFluent\DirectoryFluent.cs" />
+    <Compile Include="MappingFluent\DirectoryRefFluent.cs" />
+    <Compile Include="MappingFluent\ExePackageFluent.cs" />
+    <Compile Include="MappingFluent\FeatureFluent.cs" />
+    <Compile Include="MappingFluent\FileFluent.cs" />
+    <Compile Include="MappingFluent\FragmentFluent.cs" />
+    <Compile Include="MappingFluent\IconFluent.cs" />
+    <Compile Include="MappingFluent\MajorUpgradeFluent.cs" />
+    <Compile Include="MappingFluent\MediaTemplateFluent.cs" />
+    <Compile Include="MappingFluent\MsiPackageFluent.cs" />
+    <Compile Include="MappingFluent\MsiPropertyFluent.cs" />
+    <Compile Include="MappingFluent\PackageFluent.cs" />
+    <Compile Include="MappingFluent\PackageGroupFluent.cs" />
+    <Compile Include="MappingFluent\PackageGroupRefFluent.cs" />
+    <Compile Include="MappingFluent\PayloadFluent.cs" />
+    <Compile Include="MappingFluent\ProductFluent.cs" />
+    <Compile Include="MappingFluent\PropertyFluent.cs" />
+    <Compile Include="MappingFluent\PropertyRefFluent.cs" />
+    <Compile Include="MappingFluent\PublishFluent.cs" />
+    <Compile Include="MappingFluent\RegistrySearchFluent.cs" />
+    <Compile Include="MappingFluent\RegistryValueFluent.cs" />
+    <Compile Include="MappingFluent\RollbackBoundaryFluent.cs" />
+    <Compile Include="MappingFluent\ShortcutFluent.cs" />
+    <Compile Include="MappingFluent\UIFluent.cs" />
+    <Compile Include="MappingFluent\UIRefFluent.cs" />
+    <Compile Include="MappingFluent\WixFluent.cs" />
+    <Compile Include="MappingFluent\WixVariableFluent.cs" />
+    <Compile Include="MappingModel\ExtendBaseClasses.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Extensions\NetFx\" />
+    <Folder Include="Extensions\Powershell\" />
+    <Folder Include="MappingModel\Abstract\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
